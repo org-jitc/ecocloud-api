@@ -3,7 +3,7 @@
 ### デマンド警報
 #### URL
 ```
-/zeuschart/eco_cloud_api/event_information/demand_warning
+/zeuschart/ecocloud_api/event_information/demand_warning
 ```
 #### クエリパラメーター
 ##### 1. デマンド警報タイプ（type）
@@ -112,3 +112,31 @@ period=202011070000-202011080000
 	}
 }
 ```
+
+### モニタリングー削減電力量
+削減電力量ボタン
+日付：2020-11-3だったら2020-12-2まで
+
+### 期間データ出力
+```
+{
+	"sensorId": {
+		使用量：{
+			"datetime": "value"
+		},
+		削減量: {
+			"datetime": "value"
+		},
+		削減率: {
+			"datetime": "value"
+		}
+	}
+}
+```
+粒度：時（最大1っか月分のデータ）、30分（最大1っか月分のデータ）、分（最大1日分のデータ）
+センサー：電力量センサーと温度センサー
+オプション：平均、最高、最低（指定しなかったら平均）
+
+### テスト環境
+sfabc.ecocloud.jp
+drzm.ecocloud.jp
